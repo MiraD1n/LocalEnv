@@ -18,7 +18,7 @@ services:
     container_name: php-fpm_inst
     volumes:
       # - ../php-fpm/app:/var/www/html
-      ./src:/var/www
+      - ./src:/var/www
   nginx:
     ports:
       - "80:80"
