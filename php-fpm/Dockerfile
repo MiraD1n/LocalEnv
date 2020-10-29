@@ -3,7 +3,6 @@ FROM composer as dependencies
 RUN mkdir /root/.ssh
 COPY id_rsa /root/.ssh
 COPY known_hosts /root/.ssh
-#WORKDIR /app
 COPY ./app .
 RUN composer install
 
