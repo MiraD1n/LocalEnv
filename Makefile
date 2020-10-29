@@ -5,5 +5,5 @@ up:
 down:
 	docker-compose down
 	# docker system prune -af
-	docker rmi localenv_nginx | docker rmi localenv_php-fpm | docker rmi localenv_database | docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+	docker rmi localenv_nginx | docker rmi localenv_php-fpm | docker rmi localenv_database | docker rmi $(docker images --filter "dangling=true" -q --no-trunc) | echo "ok!"
 	docker volume prune -f
