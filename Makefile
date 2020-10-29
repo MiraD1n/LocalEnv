@@ -1,5 +1,6 @@
 up:
 	docker-compose up -d
+	docker exec php-fpm_inst ls /var/www
 down:
 	docker-compose down
 	# docker system prune -af
