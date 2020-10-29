@@ -7,3 +7,8 @@ g:
 	docker-compose down
 	docker system prune -af
 	git pull
+res:
+	docker-compose down
+	docker system prune -af
+	git pull
+	docker-compose up -d
