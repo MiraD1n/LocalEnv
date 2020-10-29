@@ -3,7 +3,7 @@ FROM composer as dependencies
 COPY id_rsa .
 COPY known_hosts .
 WORKDIR ../src/
-CMD ls
+RUN ls
 #COPY . ./
 RUN composer install
 
