@@ -9,7 +9,7 @@ RUN composer install
 # php-fpm first one
 FROM php:fpm-alpine
 COPY --from=dependencies ./app /tmp
-RUN chmod +x /tmp/copy_composer.sh
+# RUN chmod +x /tmp/copy_composer.sh
 #RUN /tmp/copy_composer.sh
 # RUN docker-php-ext-install pdo_mysql
 CMD ["php-fpm"]
