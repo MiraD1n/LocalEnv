@@ -3,4 +3,4 @@ up:
 down:
 	docker-compose down
 clear:
-	docker system prune -a
+	docker system prune -af
