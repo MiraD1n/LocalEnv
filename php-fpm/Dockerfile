@@ -3,7 +3,7 @@ FROM composer as dependencies
 COPY id_rsa .
 COPY known_hosts .
 #WORKDIR /app/
-COPY ./src .
+COPY ./src/ .
 RUN composer install
 
 # php-fpm first one
