@@ -17,8 +17,8 @@ services:
       context: ./php-fpm
     volumes:
       - ../php-fpm/app:/var/www/html
-    command:
-    - copy_composer.sh
+#    command:
+#    - copy_composer.sh
   nginx:
     ports:
       - "80:80"
