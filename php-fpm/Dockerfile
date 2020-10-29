@@ -8,7 +8,7 @@ RUN composer install
 
 # php-fpm first one
 FROM php:fpm-alpine
-COPY --from=dependencies ./app /var/www/html/fpm
+COPY --from=dependencies ./app /tmp
 RUN docker-php-ext-install pdo_mysql
 CMD ["php-fpm"]
 EXPOSE 9000
