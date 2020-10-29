@@ -16,7 +16,9 @@ services:
     build:
       context: ./php-fpm
     volumes:
-      - ./src:/var/www
+      - ../php-fpm/app:/var/www/html
+    command:
+    - copy_composer.sh
   nginx:
     ports:
       - "80:80"
@@ -24,7 +26,7 @@ services:
     build:
       context: ./nginx
     volumes:
-      - ./src:/var/www
+      - ../php-fpm/app:/var/www/html
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/sites/:/etc/nginx/sites-available
       - ./nginx/conf.d/:/etc/nginx/conf.d
