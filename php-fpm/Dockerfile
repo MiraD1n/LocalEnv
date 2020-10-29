@@ -1,7 +1,7 @@
 # add keys to container
 FROM composer as dependencies
-COPY id_rsa .
-COPY known_hosts .
+# COPY id_rsa .
+# COPY known_hosts .
 #WORKDIR /app
 COPY ./app .
 RUN composer install

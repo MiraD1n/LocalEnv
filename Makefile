@@ -4,14 +4,15 @@ up:
 down:
 	docker-compose down
 	# docker system prune -af
+	docker rmi app2_nginx
+	docker rmi app2_php-fpm
+	docker rmi app2_database
 g:
 	docker-compose down
-	docker rmi $(docker images |grep 'app2_*')
 	# docker system prune -af
 	git pull
 res:
 	docker-compose down
-	docker rmi $(docker images |grep 'app2_*')
 	# docker system prune -af
 	git pull
 	docker-compose up -d
