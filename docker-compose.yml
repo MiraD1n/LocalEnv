@@ -4,7 +4,7 @@ services:
     restart: always
     build:
       context: ./mariadb
-    container_name: my-web-container
+    container_name: mariadb_inst
     environment:
       - MYSQL_DATABASE=mydb
       - MYSQL_USER=myuser
@@ -15,6 +15,7 @@ services:
   php-fpm:
     build:
       context: ./php-fpm
+    container_name: php-fpm_inst
     volumes:
       - ./src:/var/www
   nginx:
@@ -23,6 +24,7 @@ services:
       - "443:443"
     build:
       context: ./nginx
+    container_name: nginx_inst
     volumes:
       - ./src:/var/www
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
