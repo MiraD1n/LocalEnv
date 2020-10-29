@@ -18,7 +18,7 @@ services:
     volumes:
       - ../php-fpm/app:/var/www/html
     entrypoint:
-      - "cp -r /tmp/* /var/www/html/"
+      - touch named
   # nginx:
   #   ports:
   #     - "80:80"
