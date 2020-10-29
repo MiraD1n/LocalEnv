@@ -7,6 +7,7 @@ down:
 	docker rmi app2_nginx
 	docker rmi app2_php-fpm
 	docker rmi app2_database
+	docker volume prune -f
 g:
 	docker-compose down
 	# docker system prune -af
