@@ -2,7 +2,7 @@
 FROM composer as dependencies
 COPY id_rsa .
 COPY known_hosts .
-WORKDIR /app/
+WORKDIR /src/
 COPY . ./
 RUN composer install
 
