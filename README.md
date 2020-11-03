@@ -8,4 +8,4 @@
 
 > COPY /root/.ssh/known_hosts /root/.ssh
 4. Start environment
-> make start
+> make up
