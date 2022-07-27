@@ -1,4 +1,4 @@
-# app2 usage_2:
+# app2 usage:
 1. Clone this repository
 > git clone <this repository>
 2. Go to the folder app2
